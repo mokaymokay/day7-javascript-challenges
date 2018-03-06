@@ -38,3 +38,19 @@ function crows() {
 }
 
 crows();
+
+/*
+3 - Challege : Finding recurring numbers
+
+Write a program in a new Repl.it that outputs how many times a number is repeated in the given array:
+
+Let arr = [5,10,5,2,2,1,653,5,90,5,2,7,9,20,43,92,1,74]
+
+For example:
+Array = [1,2,1,2,5]
+
+Should print out :
+“2 exists 2 times”
+“1 exists 2 times”
+“5 exists 1 time”
+*/
