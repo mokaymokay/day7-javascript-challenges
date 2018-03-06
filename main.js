@@ -1,5 +1,5 @@
 /*
-1 - A running total.
+1 - A running total
 
 Using a for loop, compute the sum of the numbers in the array named prices;
 storing the result in the sum variable.
@@ -13,3 +13,11 @@ for (let i = 0; i < prices.length; i++) {
 }
 
 console.log("The sum is: ", sum);
+
+/*
+2 - 99 Crows on the Wall
+
+Write a program in a new Repl.it that outputs all 100 lines of the classic song:
+99 Crows on the Wall. You shouldn’t have to write 300 lines of JavaScript for this
+program at all - this is the perfect chance to use a for loop or while loop!
+*/
