@@ -55,27 +55,30 @@ Should print out :
 "5 exists 1 time"
 */
 
-let arr = [5,10,5,2,2,1,653,5,90,5,2,7,9,20,43,92,1,74];
-let sorted = {};
+function findRecurring(arr) {
+  let sorted = {};
 
-for (let i = 0; i < arr.length; i++) {
-  let newNum = arr[i];
-  let counter = 0;
-  for (let j = 0; j < arr.length; j++) {
-    if (newNum === arr[j]) {
-      counter++;
+  for (let i = 0; i < arr.length; i++) {
+    let newNum = arr[i];
+    let counter = 0;
+    for (let j = 0; j < arr.length; j++) {
+      if (newNum === arr[j]) {
+        counter++;
+      }
+    }
+    sorted[newNum] = counter;
+  }
+
+  for (var prop in sorted) {
+    if (sorted[prop] === 1) {
+      console.log(`${prop} exists ${sorted[prop]} time`);
+    } else {
+      console.log(`${prop} exists ${sorted[prop]} times`);
     }
   }
-  sorted[newNum] = counter;
 }
 
-for (var prop in sorted) {
-  if (sorted[prop] === 1) {
-    console.log(`${prop} exists ${sorted[prop]} time`);
-  } else {
-    console.log(`${prop} exists ${sorted[prop]} times`);
-  }
-}
+findRecurring([5,10,5,2,2,1,653,5,90,5,2,7,9,20,43,92,1,74]);
 
 /*
 4 - Bonus Interview Question Challenge
