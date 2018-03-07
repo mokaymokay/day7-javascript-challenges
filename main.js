@@ -50,9 +50,9 @@ For example:
 Array = [1,2,1,2,5]
 
 Should print out :
-“2 exists 2 times”
-“1 exists 2 times”
-“5 exists 1 time”
+"2 exists 2 times"
+"1 exists 2 times"
+"5 exists 1 time"
 */
 
 let arr = [5,10,5,2,2,1,653,5,90,5,2,7,9,20,43,92,1,74];
@@ -83,5 +83,15 @@ for (var prop in sorted) {
 Write a program in a new Repl.it that outputs the given string string in reverse.
 Do not use the JS .reverse method.
 
-let str = “youareadeveloper”
+let str = "youareadeveloper"
 */
+
+function reverseString(str) {
+  let newStr = "";
+  for (let i = str.length; i >= 0; i--) {
+    newStr += str.charAt(i);
+  }
+  return newStr;
+}
+
+console.log(reverseString("youareadeveloper"));
