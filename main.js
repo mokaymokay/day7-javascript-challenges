@@ -22,12 +22,16 @@ Write a program in a new Repl.it that outputs all 100 lines of the classic song:
 program at all - this is the perfect chance to use a for loop or while loop!
 */
 
-function crows() {
-  for (let n = 99; n > 0; n--) {
+function crows(n) {
+  for (n; n > 0; n--) {
     if (n !== 1) {
       console.log(`${n} crows on the wall. ${n} crows.`);
       console.log('1 fell down and became a wight.');
-      console.log(`${n} crows on the wall.`);
+      if (n == 2) {
+        console.log(`${n-1} crow on the wall.`);
+      } else {
+        console.log(`${n-1} crows on the wall.`);
+      }
       console.log('');
     } else {
       console.log('1 crow on the wall. 1 single crow.');
@@ -37,7 +41,7 @@ function crows() {
   }
 }
 
-crows();
+crows(99);
 
 /*
 3 - Challege : Finding recurring numbers
