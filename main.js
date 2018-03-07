@@ -76,3 +76,12 @@ for (var prop in sorted) {
     console.log(`${prop} exists ${sorted[prop]} times`);
   }
 }
+
+/*
+4 - Bonus Interview Question Challenge
+
+Write a program in a new Repl.it that outputs the given string string in reverse.
+Do not use the JS .reverse method.
+
+let str = “youareadeveloper”
+*/
