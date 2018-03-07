@@ -25,8 +25,7 @@ program at all - this is the perfect chance to use a for loop or while loop!
 function crows(n) {
   for (n; n > 0; n--) {
     if (n !== 1) {
-      console.log(`${n} crows on the wall. ${n} crows.`);
-      console.log('1 fell down and became a wight.');
+      console.log(`${n} crows on the wall. ${n} crows. \n1 fell down and became a wight.`);
       if (n == 2) {
         console.log(`${n-1} crow on the wall.`);
       } else {
@@ -34,9 +33,7 @@ function crows(n) {
       }
       console.log('');
     } else {
-      console.log('1 crow on the wall. 1 single crow.');
-      console.log('It fell down and became a wight.');
-      console.log('There\'s no one left to defend Westeros now.');
+      console.log('1 crow on the wall. 1 single crow.\nIt fell down and became a wight.\nThere\'s no one left to defend Westeros now.');
     }
   }
 }
@@ -60,7 +57,7 @@ Should print out :
 */
 
 function findRecurring(arr) {
-  let sorted = {};
+  let sortedAndCounted = {};
 
   for (let i = 0; i < arr.length; i++) {
     let newNum = arr[i];
@@ -70,14 +67,14 @@ function findRecurring(arr) {
         counter++;
       }
     }
-    sorted[newNum] = counter;
+    sortedAndCounted[newNum] = counter;
   }
 
-  for (var prop in sorted) {
-    if (sorted[prop] === 1) {
-      console.log(`${prop} exists ${sorted[prop]} time`);
+  for (let newNum in sortedAndCounted) {
+    if (sortedAndCounted[newNum] === 1) {
+      console.log(`${newNum} exists ${sortedAndCounted[newNum]} time`);
     } else {
-      console.log(`${prop} exists ${sorted[prop]} times`);
+      console.log(`${newNum} exists ${sortedAndCounted[newNum]} times`);
     }
   }
 }
@@ -95,8 +92,8 @@ let str = "youareadeveloper"
 
 function reverseString(str) {
   let newStr = "";
-  for (let i = str.length; i >= 0; i--) {
-    newStr += str.charAt(i);
+  for (let i = str.length - 1; i >= 0; i--) {
+    newStr += str[i];
   }
   return newStr;
 }
